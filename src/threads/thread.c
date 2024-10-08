@@ -575,7 +575,8 @@ allocate_tid (void)
   lock_acquire (&tid_lock);
   tid = next_tid++;
   lock_release (&tid_lock);
-
+  lock_release (&tid_lock);
+  
   return tid;
 }
 
